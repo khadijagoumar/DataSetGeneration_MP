@@ -1,7 +1,7 @@
 # DataSetGeneration_MP
 
 1-Detecting the surface (OCR) and then generate a geographically valid point cloud.
-ImageToCP.py
+**ImageToCP.py**
 
 This script processes an architectural plan image to extract building contours, scale them to real-world dimensions, georeference them, and export the data as a **GeoJSON point cloud**.
 
@@ -18,3 +18,28 @@ This script processes an architectural plan image to extract building contours, 
 **WEAKNESSES**:
 it generates the contour of the walls doubled (thick contour)
 the generated points of a window are tripeled (we describe the windows three thin lines )
+
+
+![image](https://github.com/user-attachments/assets/1576be2f-77c6-4a59-b501-1dd0f8288c00)
+![image](https://github.com/user-attachments/assets/b197954a-b202-46b4-9c8b-c4a1d65de72f)
+
+2-Generation of a cloud point file via an image with no surface detection, contours only
+**ImageToPC_2.py**
+This script processes an architectural plan image to **extract skeletonized walls**, **detect contours**, **resample points**, **georeference them**, and **export the result as a GeoJSON point cloud**.
+
+1. **Extract Skeletonized Walls**:
+    - Converts the image to grayscale and applies **thresholding**.
+    - Uses **skeletonization** to reduce thick walls to single-line representations.
+2. **Detect Contours**:
+    - Extracts all significant **wall contours** from the skeletonized image.
+3. **Resample Contours**:
+    - Uniformly spaces points along each detected contour (**5-pixel spacing**) to create a **denser point cloud**.
+4. **Georeference the Points**:
+    - Uses an **Affine Transformation** with three **ground control points (GCPs)** to convert **image pixel coordinates** into **real-world geographic coordinates**.
+5. **Export to GeoJSON**:
+    - Converts the georeferenced points into a **GeoJSON file** (`Nosurface_Plan7.geojson`), making it usable in GIS applications.
+
+⇒It doesnt use the 2.5 spacing cus it has no reference about the surface or the length of the walls (which makes so much sense to me tbh)
+
+
+
