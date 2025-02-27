@@ -13,14 +13,14 @@ This script processes an architectural plan image to extract building contours, 
 5. **Georeference**: Uses an **Affine Transformation** with known ground control points (GCPs).
 6. **Export to GeoJSON**: Saves the georeferenced **point cloud** for GIS applications.
 
-![image](https://github.com/user-attachments/assets/13ba4428-f93a-484b-b566-2d4ed3f6caa3)
+<img src="https://github.com/user-attachments/assets/13ba4428-f93a-484b-b566-2d4ed3f6caa3" width="500px">
 
 #### **Weaknesses:**
 - Generates the contour of the walls doubled (thick contour).
 - The generated points of a window are tripled (windows are described with three thin lines).
 
-![image](https://github.com/user-attachments/assets/1576be2f-77c6-4a59-b501-1dd0f8288c00)
-![image](https://github.com/user-attachments/assets/b197954a-b202-46b4-9c8b-c4a1d65de72f)
+<img src="https://github.com/user-attachments/assets/1576be2f-77c6-4a59-b501-1dd0f8288c00" width="500px">
+<img src="https://github.com/user-attachments/assets/b197954a-b202-46b4-9c8b-c4a1d65de72f" width="500px">
 
 ---
 
@@ -42,14 +42,14 @@ This script processes an architectural plan image to **extract skeletonized wall
 5. **Export to GeoJSON**:
     - Converts the georeferenced points into a **GeoJSON file** (`Nosurface_Plan7.geojson`), making it usable in GIS applications.
 
-![image](https://github.com/user-attachments/assets/78fa5912-4b66-4067-a76b-be59aeb8a8e8)
+<img src="https://github.com/user-attachments/assets/78fa5912-4b66-4067-a76b-be59aeb8a8e8" width="500px">
 
 #### **Observation:**
 - This script does not use **2.5 cm spacing** because it has no reference for surface or wall length.
 - Some plans only detect **outer contours**, which is not practical for all cases.
 
-![image](https://github.com/user-attachments/assets/bfb7e7ca-7b4e-4155-9dac-f45cd5296e45)
-![image](https://github.com/user-attachments/assets/4afab1b5-b3ba-4905-8a0e-3234bd5311af)
+<img src="https://github.com/user-attachments/assets/bfb7e7ca-7b4e-4155-9dac-f45cd5296e45" width="500px">
+<img src="https://github.com/user-attachments/assets/4afab1b5-b3ba-4905-8a0e-3234bd5311af" width="500px">
 
 ---
 
@@ -72,8 +72,8 @@ This script processes an architectural plan image by:
 5. **GeoJSON Output**:
     - Converts the transformed points into a GeoJSON FeatureCollection and saves it to a file.
 
-![image](https://github.com/user-attachments/assets/a1336d69-fd3d-4124-bce1-83d6899089d2)
-![image](https://github.com/user-attachments/assets/1fd66596-253c-45f2-bf58-0a639a16a8e2)
+<img src="https://github.com/user-attachments/assets/a1336d69-fd3d-4124-bce1-83d6899089d2" width="500px">
+<img src="https://github.com/user-attachments/assets/1fd66596-253c-45f2-bf58-0a639a16a8e2" width="500px">
 
 ---
 
@@ -94,6 +94,6 @@ This script processes a plan image by:
 - **GeoJSON Output**:
     - Finally, the geographic coordinates are converted into a GeoJSON FeatureCollection and saved to a file.
 
-![image](https://github.com/user-attachments/assets/305a5264-5d6b-47ea-8e9f-bb99f506191e)
-![image](https://github.com/user-attachments/assets/c55ec9c6-25cb-4947-ae97-fe8d82c71302)
+<img src="https://github.com/user-attachments/assets/305a5264-5d6b-47ea-8e9f-bb99f506191e" width="500px">
+<img src="https://github.com/user-attachments/assets/c55ec9c6-25cb-4947-ae97-fe8d82c71302" width="500px">
 
